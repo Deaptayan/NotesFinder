@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Notes Finder</h1>
+        
+        <form id="searchForm">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" required>
+                    <option value="">Select Subject</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="biology">Biology</option>
+                    <option value="Geography">Geography</option>
+                    <option value="History">History</option>
+                    <option value="Civics">Civics</option>
+                    <option value="English">English</option>
+                    <option value="Computer Science">Computer Science</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Standards:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="standards" value="9"> Class 9</label>
+                    <label><input type="checkbox" name="standards" value="10"> Class 10</label>
+                    <label><input type="checkbox" name="standards" value="11"> Class 11</label>
+                    <label><input type="checkbox" name="standards" value="12"> Class 12</label>
+                    <label><input type="checkbox" name="standards" value="jee_mains"> JEE Mains</label>
+                    <label><input type="checkbox" name="standards" value="jee_advance"> JEE Advance</label>
+                    <label><input type="checkbox" id="selectAll"> Select All</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="keywords">Keywords:</label>
+                <input type="text" id="keywords" placeholder="Enter keywords (e.g., current, force)" required>
+            </div>
+
+            <div class="form-group">
+                <label>Question Type:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="questionType" value="mcq" required> MCQ</label>
+                    <label><input type="radio" name="questionType" value="short"> Short Answer</label>
+                    <label><input type="radio" name="questionType" value="long"> Long Answer</label>
+                </div>
+            </div>
+
+            <button type="submit">Search Questions</button>
+        </form>
+
+        <div id="results" class="results-container">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
